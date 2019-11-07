@@ -3,6 +3,7 @@
 @import "status-bar.css";
 @import "header.css";
 @import "nav-bar.css";
+@import "friend.css";
 
 * {
   box-sizing: border-box;
@@ -16,5 +17,6 @@ body {
 }
 
 a {
-  color: inheirt;
+  color: inherit; /*removing purple ones*/
+  text-decoration: none; /*removing underline*/
 }

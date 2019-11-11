@@ -68,11 +68,11 @@
 .message {
   display: flex;
   align-items: flex-start;
-  width: 50%;
+  width: auto;
   margin-bottom: 15px;
 }
 .message .message__content {
-  width: 70%;
+  width: auto;
 }
 .message .message__bubble {
   background-color: white;
@@ -83,6 +83,7 @@
   font-weight: 600;
   color: white;
 }
+
 .incoming-message {
   align-self: flex-start;
 }
@@ -101,6 +102,7 @@
   border-bottom-left-radius: 0px;
   background-image: linear-gradient(to right, #74ebd5, #acb6e5);
 }
+
 .sending-message {
   align-self: flex-end;
   width: 30%;

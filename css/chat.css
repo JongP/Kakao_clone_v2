@@ -1,18 +1,27 @@
-.chats-body {
-  padding: 0;
+.header-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  width: 100%;
+  background-color: white;
+  padding-bottom: 5px;
+  height: 18%;
 }
+
 .chats-body .header,
 .chats-body .status-bar {
   padding: 0px 20px;
 }
-.chat-screen {
+.chats-body {
   background-image: url("../images/criss-cross.png");
   min-height: 100vh;
+  padding-top: 100px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
-.chat__write {
+.chat__write-container {
   position: fixed;
-  bottom: 50px;
-  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,27 +30,48 @@
   margin: 0 auto;
   left: 0;
   right: 0;
+  bottom: 0;
 
-  background-color: #fcfcfc;
-  padding: 0px 20px;
-  border-radius: 20px;
+  width: 100%;
+}
+.chat__write {
+  margin: 0 auto;
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0;
+  padding: 10px 45px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+.chat__write:focus {
+  outline: none;
+  width: 80%;
+
+  transform: translateY(-50px);
+  border-radius: 40px;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 .chat__write i {
-  font-size: 22px;
+  font-size: 16px;
 }
-.chat__write-column:nth-child(2) {
-  width: 80%;
+.chat__write:focus ~ .chat__icon {
+  opacity: 0;
 }
-.chat__write-column input {
-  padding: 10px 10px;
-  width: 100%;
-  border: none;
-  font-size: 14px;
+.chat__icon {
+  font: 15px;
+  transition: opacity 0.3s ease-in-out;
 }
-.chat__write-column input:focus {
-  outline: none;
+
+.chat__icon-left {
+  position: absolute;
+  left: 10px;
+}
+.chat__icon-right {
+  position: absolute;
+  right: 10px;
 }
 /*main screen*/
 .chat-screen .chat__messages {
@@ -50,7 +80,7 @@
   align-items: center;
   border-top: 1px solid #f7f7f7;
   /*the order of lines matters*/
-  padding: 0px 20px;
+  padding: 0px 10px;
   padding-top: 30px;
 }
 .chat__messages .chat__timestamp {
@@ -105,7 +135,8 @@
 
 .sending-message {
   align-self: flex-end;
-  width: 30%;
+  /* width: 30%; */
+  margin-right: 5px;
 }
 .sending-message .message__bubble {
   border-bottom-right-radius: 0px;

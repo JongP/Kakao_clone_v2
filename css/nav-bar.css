@@ -35,3 +35,16 @@ nav {
   border-radius: 5px;
   font-size: 10px;
 }
+@keyframes showNavBar {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: none;
+  }
+}
+.nav {
+  transform: translateY(80px);
+  animation-delay: 0.5s;
+  animation: showNavBar 0.5s ease-out forwards;
+}

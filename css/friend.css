@@ -5,13 +5,15 @@
 }
 
 .friend .friend__avatar {
-  width: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 35%;
 }
 
 /* elements w/ both classes */
 .friend__avatar.g-avatar {
-  width: 70px;
+  width: 55px;
+  height: 55px;
 }
 
 .m-avatar {
